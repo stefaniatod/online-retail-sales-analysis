@@ -1,0 +1,51 @@
+SELECT *
+FROM Online_Retail_Cleaned
+LIMIT 10;
+
+
+SELECT count(*) as total_transactions
+FROM Online_Retail_Cleaned;
+SELECT count(distinct customerID) as UNIQUE_customers
+from Online_Retail_Cleaned;
+
+
+SELECT Country, round(sum(Sales), 2) as total_sales
+FROM Online_Retail_Cleaned
+group by Country
+ORDER by total_sales DESC
+limit 10;
+
+
+SELECT
+    Description,
+    ROUND(SUM(Sales),2) AS total_sales
+FROM Online_Retail_Cleaned
+GROUP BY Description
+ORDER BY total_sales DESC
+LIMIT 10;
+
+
+SELECT
+    CustomerID,
+    ROUND(SUM(Sales),2) AS total_sales
+FROM Online_Retail_Cleaned
+WHERE CustomerID IS NOT NULL
+GROUP BY CustomerID
+ORDER BY total_sales DESC
+LIMIT 10;
+
+
+SELECT
+    Country,
+    ROUND(AVG(Sales),2) AS average_sale
+FROM Online_Retail_Cleaned
+GROUP BY Country
+ORDER BY average_sale DESC;
+
+
+SELECT
+    Country,
+    COUNT(*) AS transactions
+FROM Online_Retail_Cleaned
+GROUP BY Country
+ORDER BY transactions DESC;
