@@ -67,6 +67,8 @@ Dashboard preview:
 ![Dashboard](images/dashboard.png)
 
 ---
+**Note:** The Excel dashboard is not included because it exceeds GitHub's browser upload size limit. A screenshot of the final dashboard is provided in the 'images' folder. 
+
 
 ## SQL Analysis
 
